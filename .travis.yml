@@ -8,3 +8,4 @@ deploy:
     G1tBG1tCG1tC
   on:
     repo: codeannie/node-shopping-list-integration-tests
+  app: https://protected-reef-60040.herokuapp.com/ 
