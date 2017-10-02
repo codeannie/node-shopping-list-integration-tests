@@ -9,7 +9,7 @@ const should = chai.should();
 
 chai.use(chaiHttp);
 
-describe('Recipes', function() {
+describe('recipes', function() {
   //need to activate server -- runServer is a promise that's returned
   before(function() {
     return runServer();
@@ -21,7 +21,7 @@ describe('Recipes', function() {
   //inspect response object & test if it has right keys in response object
   it('should list recipes on GET', function () {
     return chai.request(app)
-      .get('/Recipies')
+      .get('/recipes')
       .then(function(res) {
         res.should.have.status(200);
         res.should.be.json;
@@ -39,7 +39,7 @@ describe('Recipes', function() {
   it('should add a new recipe on POST', function () {
     const newRecipe = {name:'spam musubi', ingredients: ['rice', 'spam', 'teriyaki sauce']};
     return chai.request(app)
-      .post('/Recipes')
+      .post('/recipes')
       .send(newRecipe)
       .then(function(res) {
         res.should.have.status(201);
@@ -59,12 +59,12 @@ describe('Recipes', function() {
       ingredients: ['test', 'nori']
     };
     return chai.request(app)
-      .get('/Recipes')
+      .get('/recipes')
       .then(function(res) {
         updateData.id = res.body[0].id;
 
         return chai.request(app)
-          .put(`/Recipes/${updateData.id}`)
+          .put(`/recipes/${updateData.id}`)
           .send(updateData);
       })
       .then(function(res) {
@@ -75,7 +75,7 @@ describe('Recipes', function() {
   //for this  example, need to make GET request to get data 
   it('should remove recipe on DELETE', function () {
     return chai.request(app)
-      .get('/Recipes')
+      .get('/recipes')
       .then(function(res) {
         return chai.request(app)
           .delete(`/recipes/${res.body[0].id}`)
