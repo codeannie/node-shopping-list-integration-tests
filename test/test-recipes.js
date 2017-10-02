@@ -44,7 +44,7 @@ describe('recipes', function() {
       .then(function(res) {
         res.should.have.status(201);
         res.should.be.json;
-        res.body.should.be('object');
+        res.body.should.be.a('object');
         res.body.should.include.keys('id', 'name', 'ingredients');
         res.body.id.should.not.be.null;
         res.body.should.deep.equal(Object.assign(newRecipe, {id:res.body.id}));
