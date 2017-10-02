@@ -1,2 +1,10 @@
 language: node_js
 node_js: node
+deploy:
+  provider: heroku
+  api_key:
+    secure: NltLHJJwMWEcLybMHX5C9NyYTuAUD1W+MGxrM1WpTdxNzyWAhqJwwZgV5PBRqqAo8ZSdb12XIi1SvygS3K9YtK+PhAVa0t30yHO4qvImbw60cpaC2XWehjKLMCNA9VjneV2ouhsm4DFIFfF634wKoCbjBxERBJLjdnVopmM6bK/SNFqYjzokRphb1vtncvJDogiaFFat40DnRk2CoQ6e38q5xViqOfBJ+T6wXdOKGSvlIg1GMGX1vys6sw9RjzqD+ERwNOubjAZWTl1kadLxcE1/QvjVNa+qznCDVY32oHe1uFO/Qu5ldDa6/6j0BZMFpoKASj1Wd1WWabdy0AUmi2lP83nl+NZgZq4nZxslw/W4pM40DDqF9P4tAIHT5kHdabxN1VrUnBUSqAQI50h/NZ0J1J74hfGSfDJ7Fp4sxOaXMMTPrkK+inrZ3/xfTuGB90EWhaXeujS4fhHujK+p/Lhst8pCeS/bxVQNLhDSoM2HTNfiB5e+lPDhZ3vtlwAyy+TRLsn3ohZ55ruLY2ZvoVCkmRwCEb5v8rK8wgnUYv54yBQxDbO6bdJPi4exa9XPmAJtAPZVvCyYDgBlCzRSeAeTeFUi4CiuttfWiFDXU7GW1teLcfGiSU305p+e/cGEAt0DJcL1lKii6v/8mlq7PrFCuBVXHsT1v+kdExiPEo0=
+  app: !binary |-
+    G1tBG1tCG1tC
+  on:
+    repo: codeannie/node-shopping-list-integration-tests
