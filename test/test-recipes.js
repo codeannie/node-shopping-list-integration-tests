@@ -30,7 +30,7 @@ describe('recipes', function() {
         const expectedKeys = ['id', 'name', 'ingredients'];
         res.body.forEach(function(item) {
           item.should.be.a('object');
-          item.should.inclue.keys(expectedKeys);
+          item.should.include.keys(expectedKeys);
         });
       });
   });
